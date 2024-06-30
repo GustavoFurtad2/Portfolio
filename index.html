@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Furtado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #aboutme {
+            border-radius: 1vw;
+            width: 60%;
+            min-height: 30vh;
+            font-size: calc(1vw + 2vh);
+            margin: 1% 0 0 20%;
+            padding: 2vw;
+        }
+        #name {
+            text-align: center;
+            font-size: 8vh;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 6%;
+        }
+        nav {
+            background-color: black;
+        }
+
+        nav li {
+            display: inline-block;
+        }
+
+        nav li a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 1vw;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2vh;
+        }
+
+        #links {
+            text-align: center;
+            margin-top: 2vh;
+        }
+        #links ul {
+            list-style-type: none;
+        }
+        #links li {
+            display: inline-block;
+            margin: 0 0.1vw;
+        }
+        ul li a img {
+            max-width: 8vh;
+            max-height: 8vh;
+        }
+
+        #projects {
+            margin-top: 5vh;
+        }
+
+        #projects li {
+            list-style: none;
+            border: 0.2vw;
+            border-radius: 0.25vw;
+            border-color: black;
+            border-style: solid;
+            margin-left: 26%;
+            max-width: 45%;
+            margin-bottom: 1vh;
+            min-height: 10vh;
+            padding: 2vh;
+            font-size: 3vh;
+            text-align: left;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #projects li #star {
+            max-width: 2vh;
+            max-height: 2vh;
+        }
+
+        #projects li #preview {
+            min-width: 40vw;
+            min-height: 20vh;
+        }
+    </style>
+</head>
+<body>
+    <script src="projects.js"></script>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#name">Gustavo Furtado</a>
+            </li>
+            <li>
+                <a href="Projetos">Projetos</a>
+            </li>
+            <li>
+                <a href="Contato">Contato</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="name">
+        Gustavo Furtado
+    </div>
+    <div id="links">
+        <ul>
+            <li>
+                <a href="#name"><img src="assets/github-icon.png"></a>
+            </li>
+            <li>
+                <a href="#name"><img src="assets/linkedin-icon.png"></a>
+            </li>
+        </ul>
+    </div>
+    <div id="aboutme">
+        <br>
+        <p> Sou um engenheiro de software que gosta de aprender diversos tipos de assuntos, estou sempre procurando se
+        superar.</p>
+        <p>Comecei a programar em meados de 2019 desenvolvendo mods, no qual depois de um tempo se expandi para
+        outras tecnologias.</p>
+    </div>
+
+    <div id="projects">
+
+    </div>
+</body>
+</html>
