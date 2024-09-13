@@ -1,3 +1,6 @@
+const pinnedRepos = {
+    "Storm": true
+}
 async function getGithubRepos() {
 
     const url = "https://api.github.com/users/GustavoFurtad2/repos"
@@ -14,24 +17,25 @@ async function getGithubRepos() {
                 stars: repo.stargazers_count,
                 previewUrl: `https://raw.githubusercontent.com/${repo.full_name}/master/preview.png`,
                 lang: repo.language
-            }));
-
-            repos.sort((a, b) => b.stars - a.stars)
-
-            const topRepos = repos.slice(0, 5)
+            }))
 
             const projectsDiv = document.getElementById('projects')
 
-            topRepos.forEach(repo => {
-                const listItem = document.createElement('li');
-                listItem.innerHTML = `
-                    <strong>${repo.name}</strong> <br><br>
-                    <img id="preview" src="${repo.previewUrl}" alt="Preview" width="100">
-                    <br>
-                    <img id="star" src="assets/star.png" alt="Stars">${repo.stars} ${repo.lang}<br>
-                    ${repo.description}
-                `
-                projectsDiv.appendChild(listItem)
+            repos.forEach(repo => {
+
+                console.log(repo.name)
+                if (pinnedRepos[repo.name]) {
+
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+                        <strong>${repo.name}</strong> <br><br>
+                        <img id="preview" src="${repo.previewUrl}" alt="Preview" width="100">
+                        <br>
+                        <img id="star" src="assets/star.png" alt="Stars">${repo.stars} ${repo.lang}<br>
+                        ${repo.description}
+                    `
+                    projectsDiv.appendChild(listItem)
+                }
             })
         }
     } catch (e) {
