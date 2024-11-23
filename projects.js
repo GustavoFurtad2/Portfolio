@@ -1,5 +1,5 @@
 const pinnedRepos = {
-    "Storm": true
+    "Storm": false
 }
 async function getGithubRepos() {
 
